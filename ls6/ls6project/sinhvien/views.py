@@ -12,7 +12,7 @@ def index(request):
     Myname=Name.objects.all().values()
     template = loader.get_template('sinhvien/base.html')
     context = {
-        'Myname': 'Trần Vĩnh Bảo Ngọc'
+        'Myname': Myname
     }
     return HttpResponse(template.render(context, request))
 def add(request):
